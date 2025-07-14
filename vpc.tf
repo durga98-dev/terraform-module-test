@@ -1,6 +1,7 @@
 module "vpc"{
     source = "../terraform-aws-vpc"
-    project_name ="expense"
-    environment = "dev"
-    vpc_cidr = ["10.0.0.0/16"]
+    project_name = var.project_name
+    environment = var.environment
+    vpc_cidr = var.vpc_cidr
+    common_tags = var.common_tags
 }
